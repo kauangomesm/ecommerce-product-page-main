@@ -1,44 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
   
-  <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Frontend Mentor | E-commerce pagina de um produto</title>
 </head>
 <body>
+    <header>
+      <nav>
+        <img src="images/logo.svg" alt="logo - sneakers" id="logo">
+        <ul>
+          <li>Coleções
+          <li>masculino
+          <li>feminino
+          <li>Sobre
+          <li>Contato
+        </ul>
+      </nav>
+      <div>
+      <img id="carrinho" src="images/icon-cart.svg" alt="carrinho">
+      <img id="usuario" src="images/image-avatar.png" alt="usuario">
+    </div>
+    </header>
+    <div class="pagina-produto">
+      <div class="fotos-produto">
+          <div class="foto-principal">
+            <img src="images/image-product-1.jpg" alt="2 tenis em um fundo laranja">
+          </div>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
 
-  Sneaker Company
+          <div class="fotos">
+            <img class="foto_selecionada" src="images/image-product-1-thumbnail.jpg" alt="2 tenis em um fundo laranja">
+            <img src="images/image-product-2-thumbnail.jpg" alt=" 2 tenis em cima de uma pedra">
+            <img src="images/image-product-3-thumbnail.jpg" alt="tenis em cima de uma pedra">
+            <img src="images/image-product-4-thumbnail.jpg" alt="um tenis se equilibrando em 2 pedras">
+          </div>
+      </div>
+      <div class="descricao-produto">
+          <h2>sneaker company</h2>
+          <h1>Tênis de edição limitada de outono</h1>
+          <p class="descricao">Estes tênis de perfil baixo são o seu companheiro casual perfeito. Apresentando um
+            sola externa de borracha durável, eles vão resistir a tudo o que o clima pode oferecer.</p>
 
-  Fall Limited Edition Sneakers
+          <div class="valor-produto">
+            <p class="preco-final">$125.00</p>
+            <p class="desconto-produto">50%</p>
+            <p class="preco_original-produto"></p>
+            
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+          </div>
+          <div class="comprar-produto">
+            <div><button>-</button> <p></p> <button>+</button> adcionar ao carrinho</div>
+            <button><img src="images/icon-cart.svg" alt="carrinho" Add to cart ></button>
+          </div>
+      </div>
+    </div>
 
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
+  <footer>
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    feito por <a href="https://github.com/kauangomesm" target="_blank">Kauan Gomes</a>.
+  </footer>
 </body>
 </html>
