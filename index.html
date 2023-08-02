@@ -12,6 +12,7 @@
 <body>
     <header>
       <nav>
+        <img class="menu-icon" src="images/icon-menu.svg" alt="">
         <img src="images/logo.svg" alt="logo - sneakers" id="logo">
         <ul>
           <li>Coleções
@@ -27,12 +28,9 @@
     </div>
     </header>
     <div class="pagina-produto">
+      
       <div class="fotos-produto">
-          <div class="foto-principal">
-            <img src="images/image-product-1.jpg" alt="2 tenis em um fundo laranja">
-          </div>
-
-
+            <img class="foto-principal" src="images/image-product-1.jpg" alt="2 tenis em um fundo laranja">
           <div class="fotos">
             <img class="foto_selecionada" src="images/image-product-1-thumbnail.jpg" alt="2 tenis em um fundo laranja">
             <img src="images/image-product-2-thumbnail.jpg" alt=" 2 tenis em cima de uma pedra">
@@ -43,26 +41,74 @@
       <div class="descricao-produto">
           <h2>sneaker company</h2>
           <h1>Tênis de edição limitada de outono</h1>
-          <p class="descricao">Estes tênis de perfil baixo são o seu companheiro casual perfeito. Apresentando um
-            sola externa de borracha durável, eles vão resistir a tudo o que o clima pode oferecer.</p>
+          <p class="descricao">Estes tênis de perfil baixo são o seu companheiro casual perfeito. Apresentando uma
+            sola durável, eles vão resistir a tudo o que o clima oferecer.</p>
 
           <div class="valor-produto">
-            <p class="preco-final">$125.00</p>
-            <p class="desconto-produto">50%</p>
-            <p class="preco_original-produto"></p>
+            <div>
+              <p class="preco-final">$125.00</p>
+              <p class="desconto-produto">50%</p>
+            </div>
+            <p class="preco_original-produto">$250.00</p>
             
 
           </div>
           <div class="comprar-produto">
-            <div><button>-</button> <p></p> <button>+</button> adcionar ao carrinho</div>
-            <button><img src="images/icon-cart.svg" alt="carrinho" Add to cart ></button>
+            <div><button class="retirar"><img src="images/icon-minus.svg" alt=""></button> <p>0</p> <button class="adicionar"><img src="images/icon-plus.svg" alt=""></button></div>
+
+            <button class="cart-produto"><img src="images/icon-cart.svg" alt="carrinho">adicionar ao carrinho</button>
           </div>
       </div>
     </div>
-
+    <div class="cart-open">
+      <p>Cart</p>
+      <div class="cart-produtos">
+        <div class="cart-produto">
+          <img class="img-produto" src="images/image-product-1-thumbnail.jpg" alt="">
+          <div>
+            <p class="p_name">Tênis de edição limitada de outono</p>
+            <p class="p_preco">$125.00 x 3 <span>$375.00</span></p>
+          </div>
+          <img class="img-delete" src="images/icon-delete.svg" alt="">
+        </div>
+      </div>
+      <button class="checkout">Checkout</button>
+    </div>
   <footer>
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     feito por <a href="https://github.com/kauangomesm" target="_blank">Kauan Gomes</a>.
   </footer>
+  <div class="menu">
+    <ul>
+      <li><img src="images/icon-close.svg" alt="">
+      <li>Coleções
+      <li>masculino
+      <li>feminino
+      <li>Sobre
+      <li>Contato
+    </ul>
+  </div>
+  <div class="fotos-suspenca">
+      <div class="close">
+      <img src="images/icon-close.svg" alt="x">
+    </div>
+
+      <div class="img"><img class="imagem-principal" src="images/image-product-1.jpg" alt="">
+      
+        <div class="next_previous">
+          <div class="previous"><img src="images/icon-previous.svg" alt="previus"></div>
+  
+          <div class="next"><img src="images/icon-next.svg" alt="next"></div>
+        </div>
+      </div>
+    
+      <div class="carroceu">
+        <img src="images/image-product-1-thumbnail.jpg" alt="">
+        <img src="images/image-product-2-thumbnail.jpg" alt="">
+        <img src="images/image-product-3-thumbnail.jpg" alt="">
+        <img src="images/image-product-4-thumbnail.jpg" alt="  ">
+      </div>
+  </div>
+  
 </body>
 </html>
