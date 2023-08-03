@@ -11,9 +11,9 @@
 </head>
 <body>
     <header>
+      <img class="menu-icon" onclick="abrir_menu()" src="images/icon-menu.svg" alt="">
+      <img src="images/logo.svg" alt="logo - sneakers" id="logo">
       <nav>
-        <img class="menu-icon" src="images/icon-menu.svg" alt="">
-        <img src="images/logo.svg" alt="logo - sneakers" id="logo">
         <ul>
           <li>Coleções
           <li>masculino
@@ -23,7 +23,7 @@
         </ul>
       </nav>
       <div>
-      <img id="carrinho" src="images/icon-cart.svg" alt="carrinho">
+      <img id="carrinho" onclick="abrir_cart()" src="images/icon-cart.svg" alt="carrinho">
       <img id="usuario" src="images/image-avatar.png" alt="usuario">
     </div>
     </header>
@@ -46,31 +46,28 @@
 
           <div class="valor-produto">
             <div>
-              <p class="preco-final">$125.00</p>
-              <p class="desconto-produto">50%</p>
+              <p class="preco-final"></p>
+              <p class="desconto-produto"></p>
             </div>
-            <p class="preco_original-produto">$250.00</p>
+            <p class="preco_original-produto"></p>
             
 
           </div>
           <div class="comprar-produto">
-            <div><button class="retirar"><img src="images/icon-minus.svg" alt=""></button> <p>0</p> <button class="adicionar"><img src="images/icon-plus.svg" alt=""></button></div>
+            <div>
+                <button class="retirar" onclick="f_retirar()"><img src="images/icon-minus.svg" alt=""></button>
+                <p class="quantidade">1</p>
+                <button class="adicionar" onclick="f_adicionar()"><img src="images/icon-plus.svg" alt=""></button>
+              </div>
 
-            <button class="cart-produto"><img src="images/icon-cart.svg" alt="carrinho">adicionar ao carrinho</button>
+            <button class="cart-produto" onclick="add_to_cart()"><img src="images/icon-cart.svg" alt="carrinho">adicionar ao carrinho</button>
           </div>
       </div>
     </div>
     <div class="cart-open">
       <p>Cart</p>
       <div class="cart-produtos">
-        <div class="cart-produto">
-          <img class="img-produto" src="images/image-product-1-thumbnail.jpg" alt="">
-          <div>
-            <p class="p_name">Tênis de edição limitada de outono</p>
-            <p class="p_preco">$125.00 x 3 <span>$375.00</span></p>
-          </div>
-          <img class="img-delete" src="images/icon-delete.svg" alt="">
-        </div>
+        
       </div>
       <button class="checkout">Checkout</button>
     </div>
@@ -80,7 +77,7 @@
   </footer>
   <div class="menu">
     <ul>
-      <li><img src="images/icon-close.svg" alt="">
+      <li><img src="images/icon-close.svg" alt="" onclick="abrir_menu()">
       <li>Coleções
       <li>masculino
       <li>feminino
@@ -109,6 +106,6 @@
         <img src="images/image-product-4-thumbnail.jpg" alt="  ">
       </div>
   </div>
-  
+    <script src="script.js"></script>
 </body>
 </html>

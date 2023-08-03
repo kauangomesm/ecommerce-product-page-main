@@ -11,7 +11,7 @@ body{
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     overflow-x: hidden;
     position: relative;
     
@@ -33,7 +33,7 @@ header{
 }
 
 .menu{
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     display: none;
@@ -45,8 +45,8 @@ header{
 }
 
 .menu img{
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     filter: invert(1);
 }
 
@@ -58,7 +58,8 @@ header{
     list-style: none;
     width: 30%;
     height: 100%;
-    padding-left: 20px;
+    padding-left: 10px;
+    padding-top: 10px;
     font-weight: 700;
 }
 
@@ -70,6 +71,7 @@ header{
 #logo{
     width: 120px;
     height: 20px;
+    
 }
 nav{
     display: flex;
@@ -93,6 +95,7 @@ nav > ul li{
     display: flex;
     align-items: center;
     height: 100%;
+
     
 }
 nav > ul li:hover{
@@ -126,7 +129,7 @@ header div{
 }
 
 .cart-open{
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     right: 100px;
@@ -136,6 +139,10 @@ header div{
     min-height: 150px;
     border-radius: 7px;
     box-shadow: 4px 9px 20px 3px #00000021;
+}
+
+.open{
+    display: flex;
 }
 
 .cart-open > p{
@@ -448,9 +455,12 @@ width: 160px;
 
 footer{
     background-color:  #d4d4d4;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
     color: #A4A4A4;
-    margin-top: 90px;
     padding: 5px;
 }
 
@@ -478,6 +488,7 @@ footer a:hover{
         flex-direction: column;
         align-items: center;
         width: 100%;
+        padding-bottom: 50px;
     }
     .pagina-produto .fotos-produto{
         width: 100%;
@@ -500,9 +511,9 @@ footer a:hover{
     .comprar-produto{
         padding: 30px 0px;
     }
-    footer{
+    /* footer{
         display: none;
-    }
+    } */
 
 }
 
