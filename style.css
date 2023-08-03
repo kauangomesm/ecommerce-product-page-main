@@ -167,6 +167,10 @@ header div{
     cursor: pointer;
 }
 
+.close{
+    display: none;
+}
+
 .cart-open .cart-produtos .cart-produto{
     display: flex;
     justify-content: space-between;
@@ -391,6 +395,7 @@ width: 160px;
     width: 100%;
     padding: 10px;
     justify-content: space-between;
+    
 }
 
 .comprar-produto p{
@@ -533,7 +538,9 @@ footer a:hover{
     }
     .comprar-produto div{
         width: 100%;
-        padding-bottom: 30px;
+        padding:15px 0px;
+        margin-bottom: 10px;
+        
     }
     .comprar-produto .cart-produto{
         width: 100%;

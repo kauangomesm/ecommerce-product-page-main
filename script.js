@@ -9,6 +9,8 @@ const menu_mobile = document.querySelector(".menu")
 const valor_produto = document.querySelector(".preco-final")
 const desconto_produto = document.querySelector(".desconto-produto")
 const valor_original = document.querySelector(".preco_original-produto")
+const cart_checkout = document.querySelector(".checkout")
+const cart_vazio = document.querySelector("#cart_vazio")
 
 
 let preço = 550
@@ -31,6 +33,15 @@ function f_adicionar(){
 }
 function abrir_cart(){
     cart_open.classList.toggle('open');
+
+    if (!document.querySelector('#tenis_outono')){
+        cart_checkout.classList.add('close')
+        cart_vazio.classList.remove('close')
+    }
+    else{
+        cart_checkout.classList.remove('close')
+        cart_vazio.classList.add('close')
+    }
 }
 function abrir_menu(){
     menu_mobile.classList.toggle('open')
@@ -41,7 +52,7 @@ function add_to_cart(){
       <img class="img-produto" src="images/image-product-1-thumbnail.jpg" alt="">
       <div>
         <p class="p_name">Tênis de edição limitada de outono</p>
-        <p class="p_preco">$${a_pagar} x ${quantidade.innerHTML} <span>$${preço*parseInt(quantidade.innerHTML)}.00</span></p>
+        <p class="p_preco">$${a_pagar} x ${quantidade.innerHTML} <span>$${a_pagar*parseInt(quantidade.innerHTML)}.00</span></p>
       </div>
       <img class="img-delete" onclick="deletar_produto()" src="images/icon-delete.svg" alt="">
     </div>
@@ -50,29 +61,43 @@ function add_to_cart(){
         cart_produtos.innerHTML = produto  
     }
     else{
-        let valor = document.querySelector('.p_preco')
+        let valor = document.querySelector('.p_preco').innerHTML
+        let nova_qtd = (parseInt((Array.from(valor.slice(valor.indexOf('x')+2))).reverse().slice((Array.from(valor.slice(valor.indexOf('x')+2))).reverse().indexOf('R')+2).reverse().join(''))) + parseInt(quantidade.innerHTML)
+        // cart_produtos.innerHTML = ''
+        cart_produtos.innerHTML = `
+        <div class="cart-produto" id="tenis_outono">
+      <img class="img-produto" src="images/image-product-1-thumbnail.jpg" alt="">
+      <div>
+        <p class="p_name">Tênis de edição limitada de outono</p>
+        <p class="p_preco">$${a_pagar} x ${nova_qtd} <span>$${a_pagar*parseInt(nova_qtd)}.00</span></p>
+      </div>
+      <img class="img-delete" onclick="deletar_produto()" src="images/icon-delete.svg" alt="">
+    </div>
+    `
         
+    }
+
+    if (!document.querySelector('#tenis_outono')){
+        cart_checkout.classList.remove('close')
+        
+    }
+    else{
+        cart_checkout.classList.remove('close')
+        cart_vazio.classList.add('close')
     }
 }
 
 
 function deletar_produto(){
     cart_produtos.innerHTML = ''
+
+    if (!document.querySelector('#tenis_outono')){
+        cart_checkout.classList.add('close')
+        cart_vazio.classList.remove('close')
+    }
+    else{
+        cart_checkout.classList.remove('close')
+        cart_vazio.classList.add('close')
+
+    }
 }
-
-
-
-
-
-
-
-
-
-{/* <div class="cart-produto">
-          <img class="img-produto" src="images/image-product-1-thumbnail.jpg" alt="">
-          <div>
-            <p class="p_name">Tênis de edição limitada de outono</p>
-            <p class="p_preco">$125.00 x 3 <span>$375.00</span></p>
-          </div>
-          <img class="img-delete" src="images/icon-delete.svg" alt="">
-        </div> */}
