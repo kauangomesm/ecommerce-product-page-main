@@ -10,7 +10,7 @@ const valor_produto = document.querySelector(".preco-final")
 const desconto_produto = document.querySelector(".desconto-produto")
 const valor_original = document.querySelector(".preco_original-produto")
 const cart_checkout = document.querySelector(".checkout")
-const cart_vazio = document.querySelector("#cart_vazio")
+const cart_vazio = document.querySelector("#vazio")
 
 
 let preço = 550

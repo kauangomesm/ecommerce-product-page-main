@@ -145,12 +145,20 @@ header div{
     display: flex;
 }
 
-.cart-open > p{
+#name_carrinho{
     padding: 10px;
     font-weight: 700;
     border-radius: 7px 7px 0px 0px;
     height: 50px;
     border-bottom: 1px solid #A4A4A4;
+}
+
+#vazio{
+    padding-top: 30px;
+    font-weight: 700;
+    border-radius: 7px 7px 0px 0px;
+    height: 50px;
+    text-align: center;
 }
 
 .cart-open .checkout{
